@@ -40,6 +40,9 @@
                                                 <state key="normal" title="Log In">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="yje-5A-4rB" kind="presentation" modalPresentationStyle="fullScreen" id="wzq-5J-eXa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -76,6 +79,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1291" y="14"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V5f-1r-ns9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="un9-Q7-rpn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="yje-5A-4rB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s49-ny-Slb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="meM-GO-dZG">
+                                <rect key="frame" x="59" y="61.5" width="202" height="445"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="gWl-c0-zaa">
+                                        <rect key="frame" x="0.0" y="0.0" width="202" height="147"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtk-1B-79L">
+                                                <rect key="frame" x="0.0" y="0.0" width="202" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgf-aQ-FTa">
+                                                <rect key="frame" x="63.5" y="63" width="75" height="84"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBW-fn-hcy">
+                                        <rect key="frame" x="49" y="397" width="104" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Log Out">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="76x-69-TvV"/>
+                        <color key="backgroundColor" red="0.72370027119495595" green="0.58100803493178699" blue="0.9576986494974874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="meM-GO-dZG" firstAttribute="centerY" secondItem="s49-ny-Slb" secondAttribute="centerY" id="FT2-tP-WEW"/>
+                            <constraint firstItem="meM-GO-dZG" firstAttribute="centerX" secondItem="s49-ny-Slb" secondAttribute="centerX" id="Qc7-cI-EH3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2256.2790697674418" y="13.519313304721031"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1XW-1v-KtK">
