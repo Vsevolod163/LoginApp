@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     @IBOutlet private var logInButton: UIButton!
     @IBOutlet private var userNameTF: UITextField!
