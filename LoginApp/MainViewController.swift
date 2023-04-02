@@ -26,7 +26,7 @@ final class MainViewController: UIViewController {
 
         welcomeVC.userName = userNameTF.text
         
-        checkLogInWith(userName: userName, password: password)
+        checkLogInWith(userName, password)
     }
     
     @IBAction private func unwind(for segue: UIStoryboardSegue) {
@@ -57,7 +57,7 @@ final class MainViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    private func checkLogInWith(userName: String, password: String) {
+    private func checkLogInWith(_ userName: String, _ password: String) {
         if userNameTF.text != userName || passwordTF.text != password {
             showAlert(
                 withTitle: "Invalid login or password",
