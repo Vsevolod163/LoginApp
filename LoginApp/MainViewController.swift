@@ -13,8 +13,8 @@ final class MainViewController: UIViewController {
     @IBOutlet private var userNameTF: UITextField!
     @IBOutlet private var passwordTF: UITextField!
     
-    private let userName = "User"
-    private let password = "Password"
+    let userName = "User"
+    let password = "Password"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +25,21 @@ final class MainViewController: UIViewController {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
 
         welcomeVC.userName = userNameTF.text
+        
         checkLogInWith(userName: userName, password: password)
     }
     
+    @IBAction private func unwind(for segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
+    }
     
-    
-    @IBAction func forgotNameButtonTapped() {
-        showAlert(withTitle: "Your Username", andMessage: userName)
+    @IBAction private func forgotNameButtonTapped() {
+        showAlert(withTitle: "No problem!", andMessage: "Your Username is \(userName) 😊")
     }
 
-    @IBAction func forgotPasswordButtonTapped() {
-        showAlert(withTitle: "Your Password", andMessage: password)
+    @IBAction private func forgotPasswordButtonTapped() {
+        showAlert(withTitle: "No problem!", andMessage: "Your Password is \(password) 😊")
     }
     
     private func showAlert(withTitle title: String, andMessage message: String) {
@@ -46,7 +50,6 @@ final class MainViewController: UIViewController {
         )
         
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.userNameTF.text = ""
             self.passwordTF.text = ""
         }
         
@@ -56,7 +59,10 @@ final class MainViewController: UIViewController {
     
     private func checkLogInWith(userName: String, password: String) {
         if userNameTF.text != userName || passwordTF.text != password {
-            showAlert(withTitle: "Error", andMessage: "Wrong Username or Password")
+            showAlert(
+                withTitle: "Invalid login or password",
+                andMessage: "Please, enter correct login and password"
+            )
         }
      }
 }
