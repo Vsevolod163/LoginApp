@@ -18,6 +18,7 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         logInButton.layer.cornerRadius = 5
     }
     
@@ -27,6 +28,12 @@ final class LoginViewController: UIViewController {
         welcomeVC.userName = userNameTF.text
         
         checkLogInWith(userName, password)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        
+        view.endEditing(true)
     }
     
     @IBAction private func unwind(for segue: UIStoryboardSegue) {
