@@ -26,8 +26,6 @@ final class LoginViewController: UIViewController {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
 
         welcomeVC.userName = userNameTF.text
-        
-        checkLogInWith(userName, password)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -39,6 +37,11 @@ final class LoginViewController: UIViewController {
     @IBAction private func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
+    }
+    
+    
+    @IBAction func logInButtonTapped() {
+        checkLogIn()
     }
     
     @IBAction private func forgotNameButtonTapped() {
@@ -64,7 +67,7 @@ final class LoginViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    private func checkLogInWith(_ userName: String, _ password: String) {
+    private func checkLogIn() {
         if userNameTF.text != userName || passwordTF.text != password {
             showAlert(
                 withTitle: "Invalid login or password",
