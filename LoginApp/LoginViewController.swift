@@ -41,12 +41,16 @@ final class LoginViewController: UIViewController {
         checkLogIn()
     }
     
-    @IBAction private func forgotNameButtonTapped() {
-        showAlert(withTitle: "No problem!", andMessage: "Your Username is \(userName) 😊")
-    }
-
-    @IBAction private func forgotPasswordButtonTapped() {
-        showAlert(withTitle: "No problem!", andMessage: "Your Password is \(password) 😊")
+    @IBAction private func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+            ? showAlert(
+                withTitle: "No problem!",
+                andMessage: "Your Username is \(userName) 😊"
+            )
+            : showAlert(
+                withTitle: "No problem!",
+                andMessage: "Your Password is \(password) 😊"
+            )
     }
     
     private func showAlert(withTitle title: String, andMessage message: String) {
