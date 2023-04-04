@@ -43,7 +43,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="logInButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Sn-DP-gTs"/>
-                                                    <segue destination="yje-5A-4rB" kind="presentation" modalPresentationStyle="fullScreen" id="wzq-5J-eXa"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -87,6 +86,7 @@
                         <outlet property="logInButton" destination="lqK-AF-RO3" id="lZM-6w-LN6"/>
                         <outlet property="passwordTF" destination="dul-3n-vBl" id="0tb-bU-HWq"/>
                         <outlet property="userNameTF" destination="Iy1-Yc-bGS" id="0BV-3T-dv5"/>
+                        <segue destination="yje-5A-4rB" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="1wP-J6-Csm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
